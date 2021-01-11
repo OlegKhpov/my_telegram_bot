@@ -1,6 +1,6 @@
 import requests
 
-CITY_ID_IZMAIL = 'CITY_CODE'  # Insert your code
+CITY_ID = 'CITY_CODE'  # Insert your code
 OPEN_WEATHER_API_KEY = 'API_KEY'  # Insert your api key from openweathermap.org
 WEATHER = {
     '200': "thunderstorms",
@@ -13,7 +13,7 @@ WEATHER = {
 }
 
 
-def get_weather_now(city=CITY_ID_IZMAIL):
+def get_weather_now(city=CITY_ID):
     URL = 'http://api.openweathermap.org/data/2.5/weather'
     response = requests.get(URL, params={
         'id': city,
